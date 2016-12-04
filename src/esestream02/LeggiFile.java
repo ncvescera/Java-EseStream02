@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * 
  * @author ncvescera
  */
 public class LeggiFile {
@@ -36,8 +36,7 @@ public class LeggiFile {
     public void readAll(ArrayList<Record> array){
         try {
             while(this.inputStream.available() != 0){
-                array.add(this.leggi());
-                //System.out.println("---------------------");
+                array.add(this.leggi()); //aggiunge il Record letto all'array
             }
         } catch (IOException ex) {
             Logger.getLogger(LeggiFile.class.getName()).log(Level.SEVERE, null, ex);

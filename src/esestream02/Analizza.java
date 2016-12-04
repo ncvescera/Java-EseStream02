@@ -41,7 +41,8 @@ public class Analizza {
             
             //rimozione indici già analizzati
             for (int i = indexArray.size()-1; i >= 0; i--) {
-                array.remove(i);
+                int indexToRemove = indexArray.get(i);
+                array.remove(indexToRemove);
             }           
             
             media /= indexArray.size(); //calcolo della media

@@ -1,7 +1,7 @@
 package esestream02;
 
 /**
- *
+ * Classe per contenere i dati pesenti nel file
  * @author ncvescera
  */
 public class Record {

@@ -25,7 +25,7 @@ public class JavaEseStream02 {
             valutazione = EasyInput.inputS("Valutazione: ");
             voto = EasyInput.inputI("Voto: ");
             
-            fileWriter.scrivi(cognome,materia,valutazione,voto);
+            fileWriter.scrivi(cognome,materia,valutazione,voto); //scrive i dati in input nel file
             
         }while(!(EasyInput.inputS("Continuare?\t[no-0]").equals("0")));
         
@@ -35,16 +35,17 @@ public class JavaEseStream02 {
         ArrayList<Record> rows = new ArrayList(); //array che conterrà ogni riga del file
         
         
-        fileReader.readAll(rows);
-        fileReader.close();
+        fileReader.readAll(rows); //legge tutti i dati presenti nel file
+        fileReader.close(); //chiusura del fileReader
         
+        //Stampa dei dati letti
         for(Record elem:rows)
             elem.print();
         
-        System.out.println("MEDE\n");
+        //Stampa delle medie
+        System.out.println("MEDIE");
         
         Analizza recordAnalizer = new Analizza(rows);
-        
         recordAnalizer.analizza();
     }
     
